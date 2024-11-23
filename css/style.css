@@ -39,8 +39,11 @@ a:hover{
 #trocarTema{
     font-size: 20px;
     color: white;
-    cursor: pointer;
-    transition: ;
+    cursor: pointer;    
+}
+
+#trocarTema:hover { 
+    color: #da1212;
 }
 
 .menu{
@@ -70,4 +73,29 @@ a:hover{
 .menu-mobile  .menu-link{
     flex-direction: column;
     justify-content: center;
+    padding: 8px 15px;
 }
+
+.menu-link.active .menu-icon,
+.menu-link.active .menu-text,
+.menu-link:hover .menu-icon,
+.menu-link:hover .menu-text{
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+.menu-icon
+.menu-text{
+    color: #838383;
+    font-weight: 600; /*expessura*/
+}
+.menu-icon{
+    font-size: 18px;
+    color: darkcyan;
+}
+
+.menu-text{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
