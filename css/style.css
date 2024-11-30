@@ -345,13 +345,68 @@ Class = ( . ) ponto */
     font-size: 30px;
 }
 
+.card-button .btn i:hover,
+.card-button .btn span:hover { 
+    color: var(--cor--menu);
+}
 
+.card-button .btn i {
+    color: var(--cor-seta);
+}
 
+/*sobre*/
+
+.sobre{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.sobre-content1,
+.sobre-content2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 32px;
+}
+
+.sobre-logo{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+    border-radius: 50%;
+    border: 8px solid var(--cor-icone);
+}
+
+.sobre-descricao{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 18px;
+}
 
 /*  Responsivo  */
 
+
+@media (min-width: 576px) {
+
+    h1 {
+        font-size: 48px;
+        margin-bottom: 25px;
+    }
+    h2 {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+} 
+/* Fim 576 */
+
+
+
 @media (min-width: 768px) {
-    /* apartit de  */
+    /* apartir de  */
 
     #header {
         position: fixed;
@@ -386,17 +441,32 @@ Class = ( . ) ponto */
     }
 
     h1 {
-        font-size: 80px;
+        font-size: 64px;
+        margin-bottom: 30px;
     }
 
+    h2 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+} 
+
+/* fim 768px */
+
+
+
+
+/* Comprimento até 768px */
+@media (max-width: 768px) {
     .projetos h2 {
         font-size: 60px;
     }
-
 }
+/* Fim comprimento até 768px */
 
-/* apartir de */
 
+
+/* apartir de  */
 @media (min-width: 992px) {
 
     .projeto-card {
@@ -408,14 +478,32 @@ Class = ( . ) ponto */
     .img-card {
         width: 55%;
     }
+    h1 {
+        font-size: 80px;
+        margin-bottom: 40px;
+    }
+    h2 {
+        font-size: 48px;
+        margin-bottom: 35px;
+    }
 
-    .projetos h2 {
-        font-size: 70px;
+    .sobre{
+        gap: 80px;
+    }
+
+    .sobre-content1,
+    .sobre-content2{
+        display: grid;
+        grid-template-columns: 30% 60%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 64px;
     }
 }
 
-/* apartir de */
+/* Fim 992 */
 
+/* apartir de  */
 @media (min-width: 1200px) {
     #home {
         padding: 60px 96px 32px;
@@ -427,14 +515,19 @@ Class = ( . ) ponto */
     p, span, li {
         font-size: 20px;
     }
-
-    .projetos h2 {
-        font-size: 80px;
+    h1 {
+        font-size: 96px;
+        margin-bottom: 50px;
+    }
+    h2 {
+        font-size: 56px;
+        margin-bottom: 40px;
     }
 }
 
-/*  apartir de */
+/*  fim 1200px */
 
+/* apartir de  */
 @media (min-width: 1400px) {
 
     .header {
@@ -443,11 +536,17 @@ Class = ( . ) ponto */
     }
 
     h1 {
-        font-size: 100px;
-        /* text-align: justify; */
+        font-size: 112px;
+        margin-bottom: 60px;
     }
-    .projetos h2 {
-        font-size: 90px;
+
+    h2 {
+        font-size: 64px;
+        margin-bottom: 50px;
+    }
+    .projetos, 
+    .sobre { 
+        padding: 160px 240px 64px;
     }
 }
 
