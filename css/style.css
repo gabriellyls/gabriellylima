@@ -61,7 +61,6 @@
 
 }
 
-
 /* Reset do navegador */
 * {
     margin: 0;
@@ -98,6 +97,7 @@ h1 {
     color: var(--cor-titulo);
     font-family: "Inter", sans-serif;
     text-transform: uppercase;
+    margin-top: 40px;
 }
 
 b {
@@ -123,8 +123,17 @@ Class = ( . ) ponto */
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 5px 1px;
+    padding: 8px 16px;
     z-index: 2;
+}
+
+html[data-theme='dark'] .logo{
+    filter: invert(1);
+}
+
+.header-logo .logo{
+    width: 50px;
+    height: 40px;
 }
 
 .trocar-tema {
@@ -386,6 +395,12 @@ Class = ( . ) ponto */
     justify-content: flex-start;
     gap: 18px;
 }
+
+
+
+
+
+
 
 /*  Responsivo  */
 
