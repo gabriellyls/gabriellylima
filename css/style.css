@@ -1,46 +1,46 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/* Variavies para as Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --font-menu: "Poppins", serif;
-    --font-h1: ;
-    --font-h2: "Domine";
-    --font-p: ;
+    --font-menu: "Poppins", sans-serif;
+    --texto: "Inter", sans-serif;
+    --titulo-h1: "Inter", sans-serif;
+    --font-h2: "Inter", sans-serif;
+    --font-h3: "Domine", serif;
+    --font-p: "Domine", serif;
+    --font-sub-titulo: "League Spartan", sans-serif;
 }
 
-/* tema Dark */
 :root,
-:root[data-theme='dark'] { 
-    
+:root[data-theme='dark'] {
+
     --cor-fundo: #111217;
     --cor-texto-padrao: #dfe0e6;
 
     --cor-borda: #dfe0e6;
 
     --cor-titulo: #dfe0e6;
-    --cor-subtitulo: #dfe0e6;
+    --cor-subtitulo: #48a7f5;
 
     --cor-texto: #dfe0e6;
 
     --cor-hover: #dfe0e6;
     --cor--menu: #7b7b7b;
 
-    --cor-link: #dfe0e6; 
+    --cor-link: #dfe0e6;
     --cor-icone: #dfe0e6;
     --icone-hover: #7b7b7b;
 
     --trocar-tema: #ffa600;
 
     --cor-btn: #dfe0e6;
+
+    --cor-seta: #48a7f5;
 }
 
-/* tema Light */
 :root[data-theme='light'] {
 
     --cor-fundo: #dfe0e6;
-    --cor-texto-padrao:  #111217;
+    --cor-texto-padrao: #111217;
 
     --cor-borda: #111217;
 
@@ -51,7 +51,7 @@
     --cor-hover: #111217;
     --cor--menu: #7b7b7b;
 
-    --cor-link: #dfe0e6; 
+    --cor-link: #dfe0e6;
     --cor-icone: #111217;
     --icone-hover: #7b7b7b;
 
@@ -59,21 +59,23 @@
 
     --cor-btn: #111217;
 
+    --cor-seta: #111217;
+
 }
 
-/* Reset do navegador */
+html[data-theme='dark'] .logo {
+    filter: invert(1);
+}
+
 * {
     margin: 0;
-    /* margem */
     padding: 0;
-    /* preenchimento */
     box-sizing: border-box;
+
 }
 
 body {
     background: var(--cor-fundo);
-    /* cor Fundo */
-    /* HEXADECIMAL */
     color: var(--cor-texto-padrao);
 }
 
@@ -88,15 +90,16 @@ a:hover {
 }
 
 i {
-    color: var();
+    color: var(--cor-icone);
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 200;
     color: var(--cor-titulo);
-    font-family: "Inter", sans-serif;
+    font-family: var(--titulo-h1);
     text-transform: uppercase;
+    margin-bottom: 20px;
     margin-top: 40px;
 }
 
@@ -104,7 +107,9 @@ b {
     font-weight: 400;
 }
 
-p, span, li {
+p,
+span,
+li {
     font-size: 16px;
 }
 
@@ -113,25 +118,17 @@ p {
     font-family: "Poppins", serif;
 }
 
-/* 
-ID = # 
-Class = ( . ) ponto */
-/* estrutura do menu */
 #header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 8px 16px;
+    padding: 16px 16px;
     z-index: 2;
 }
 
-html[data-theme='dark'] .logo{
-    filter: invert(1);
-}
-
-.header-logo .logo{
+.header-logo .logo {
     width: 50px;
     height: 40px;
 }
@@ -145,7 +142,6 @@ html[data-theme='dark'] .logo{
     font-size: 22px;
     color: var(--trocar-tema);
     cursor: pointer;
-    /* transition: ; */
 }
 
 .menu {
@@ -277,15 +273,17 @@ html[data-theme='dark'] .logo{
     gap: 32px;
 }
 
-.projetos h2{
-    text-align: center;
-    font-size: 80px;
-    font-family: var(--font-h2);
+h2 {
+    font-size: 24px;
+    font-weight: 200;
     color: var(--cor-titulo);
-    margin-bottom: 25px;
+    font-family: var(--font-sub-titulo);
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
-.projetos-container { 
+.projetos-container {
     display: flex;
     flex-direction: column;
     gap: 64px;
@@ -309,53 +307,57 @@ html[data-theme='dark'] .logo{
     box-shadow: 10px 4px 25px rgba(196, 196, 196, 0.452);
 }
 
-.card-title{
+.card-title {
     font-size: 32px;
     color: var(--cor-subtitulo);
     font-weight: 100;
     font-family: var(--font-h3);
 }
 
-.card-descricao{
+.card-descricao {
     color: var(--cor-texto);
     font-size: 22px;
     font-family: var(--texto);
 }
 
-.card-lista{
+.card-lista {
     font-family: var(--texto);
-    list-style: ;
+    /*  list-style: disc; */
     margin-bottom: 50px;
 }
 
-.card-lista .card-item{
-    font-size: 15px;
+.card-lista .card-item {
+    font-size: 18px;
     color: var(--cor-texto);
     margin: 10px;
     margin-left: 15px;
+    list-style: none;
+}
 
+.icone-seta {
+    color: var(--cor-seta);
 }
 
 .card-button,
-.card-descricao{
+.card-descricao {
     display: flex;
     flex-flow: row;
     justify-content: flex-start;
 }
 
-.card-button .btn{
+.card-button .btn {
     padding: 8px 20px;
     margin-top: 15px;
 }
 
-.card-button .btn span{
+.card-button .btn span {
     color: var(--cor-btn);
     font-family: var(--texto);
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .card-button .btn i:hover,
-.card-button .btn span:hover { 
+.card-button .btn span:hover {
     color: var(--cor--menu);
 }
 
@@ -363,33 +365,31 @@ html[data-theme='dark'] .logo{
     color: var(--cor-seta);
 }
 
-/*sobre*/
-
-.sobre{
+.sobre {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 20px;
 }
 
 .sobre-content1,
-.sobre-content2{
+.sobre-content2 {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: flex-start;
+    align-items: flex-start;
     gap: 32px;
 }
 
-.sobre-logo{
+.sobre-logo {
     width: 100%;
     object-fit: cover;
     object-position: center;
     pointer-events: none;
     border-radius: 50%;
-    border: 8px solid var(--cor-icone);
+    border: 8px solid var(--cor-borda);
 }
 
-.sobre-descricao{
+.sobre-descricao {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -407,22 +407,22 @@ html[data-theme='dark'] .logo{
     color: var(--cor-seta);
 }
 
-.sobre-content1 .col1,
-.sobre-content2 .col2{
+.sobre-content2 .col1, 
+.sobre-content2 .col2 {
     display: flex;
     flex-direction: column;
     text-align: justify;
     gap: 32px;
 }
 
-.sobre-content1 .col1 .row1,
-.sobre-content2 .col2 .row2{
+.sobre-content2 .colt1 .row1,
+.sobre-content2 .colt2 .row2{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    hanging-punctuation: 5px;
 }
 
-h3{
+h3 {
     font-size: 20px;
     font-family: var(--font-h3);
     font-weight: 200;
@@ -431,7 +431,7 @@ h3{
     text-transform: uppercase;
 }
 
-.accordion-header{
+.accordion-header {
     width: 100%;
     display: flex;
     padding: 8px 16px;
@@ -442,42 +442,93 @@ h3{
     text-align: left;
     cursor: pointer;
     transition: ease-in-out .3s;
-
 }
 
-.accordion-header, span,
-.accordion-header i{
+.accordion-header span, 
+.accordion-header i {
     color: var(--cor-texto);
 }
-
-.accordion-body{
-    display: ;
-    padding: 18px;
-    flex-direction: column;
+.accordion-body {
+    display: none;
+    padding: 10px;
     align-items: flex-start;
+    flex-direction: column;
     gap: 20px;
-    border: 1px solid var(--cor-btn);
+    border: 1px solid var(--cor-borda);
 }
-
 .accordion-body p {
-    font-family: var(--texto);
+    font-family: var(--font-p);
     margin-bottom: 5px;
 }
-
-.accordion-item.active .accordion-body{
+.accordion-item.active .accordion-body {
     display: flex;
 }
 
-.accordion-item.active .bi-caret.down-fill{
+.accordion-item.active .bi-caret-down-fill {
     transform: rotate(180deg);
-    transition: ease .5s;
+    transition:ease .5s;
 }
 
-.accordion-item.active .accordion-header{
+.accordion-item.active .accordion-header {
     background: var(--cor--menu);
 }
 
-/*  Responsivo  */
+.accordion-item {
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 16px;
+}
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 16px;
+    border-top: 1px solid var(--cor--menu);
+    border-bottom: 1px solid var(--cor--menu);
+}
+
+.contato p {
+    text-align: center;
+}
+
+.contato p { 
+    text-align: center;
+}
+
+.contato button {
+    margin-bottom: 10px;
+}
+
+footer {
+    margin-bottom: 80px;
+}
+
+footer p {
+    font-size: 12px;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #48a7f5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (min-width: 576px) {
@@ -486,11 +537,13 @@ h3{
         font-size: 48px;
         margin-bottom: 25px;
     }
+
     h2 {
         font-size: 32px;
         margin-bottom: 25px;
     }
-} 
+}
+
 /* Fim 576 */
 
 
@@ -539,7 +592,16 @@ h3{
         font-size: 40px;
         margin-bottom: 30px;
     }
-} 
+
+    .contato {
+        padding: 90px;
+
+    }
+
+    .contato p {
+        width: 80%;
+    }
+}
 
 /* fim 768px */
 
@@ -552,6 +614,7 @@ h3{
         font-size: 60px;
     }
 }
+
 /* Fim comprimento até 768px */
 
 
@@ -560,31 +623,35 @@ h3{
 @media (min-width: 992px) {
 
     .projeto-card {
-        flex-direction: row; 
+        flex-direction: row;
     }
-    .card-reverse { 
+
+    .card-reverse {
         flex-direction: row-reverse;
     }
+
     .img-card {
         width: 55%;
     }
+
     h1 {
         font-size: 80px;
         margin-bottom: 40px;
     }
+
     h2 {
         font-size: 48px;
         margin-bottom: 35px;
     }
 
-    .sobre{
+    .sobre {
         gap: 80px;
     }
 
     .sobre-content1,
-    .sobre-content2{
+    .sobre-content2 {
         display: grid;
-        grid-template-columns: 30% 60%;
+        grid-template-columns: 30% 70%;
         justify-content: flex-start;
         align-items: flex-start;
         gap: 64px;
@@ -602,13 +669,18 @@ h3{
     .main-content .btn {
         width: auto;
     }
-    p, span, li {
+
+    p,
+    span,
+    li {
         font-size: 20px;
     }
+
     h1 {
         font-size: 96px;
         margin-bottom: 50px;
     }
+
     h2 {
         font-size: 56px;
         margin-bottom: 40px;
@@ -634,8 +706,9 @@ h3{
         font-size: 64px;
         margin-bottom: 50px;
     }
-    .projetos, 
-    .sobre { 
+
+    .projetos,
+    .sobre {
         padding: 160px 240px 64px;
     }
 }

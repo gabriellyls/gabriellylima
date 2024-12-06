@@ -32,7 +32,7 @@ menuLinks.forEach(item => {
     })
 })
 
-/*  * Animation on scroll */ 
+/*  * Animation on scroll */
 
 window.addEventListener('load', () => {
     AOS.init({
