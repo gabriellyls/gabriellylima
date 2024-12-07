@@ -18,6 +18,9 @@
     <!-- Box Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
 </head>
 
@@ -151,7 +154,7 @@
 
         </div>
 
-        <div class="video">
+        <div data-aos="zoom-in" class="video">
 
             <iframe src="https://www.youtube.com/embed/EAjWeHn01Z8" title="Eu sendo coração mole e o Google me entende"
                 frameborder="0"
@@ -169,7 +172,7 @@
         <div class="projetos-container">
 
             <!-- Projeto 1 -->
-            <div class="projeto-card">
+            <div  data-aos="fade-right" class="projeto-card">
 
                 <img src="img/projetos/josisbox.jpg" alt="" class="img-card">
 
@@ -224,7 +227,7 @@
 
 
             <!-- Projeto 2 -->
-            <div class="projeto-card card-reverse">
+            <div data-aos="fade-left" class="projeto-card card-reverse">
 
                 <img src="img/projetos/games-store.jpg" alt="" class="img-card">
 
@@ -274,7 +277,7 @@
 
 
             <!-- Projeto 1 -->
-            <div class="projeto-card">
+            <div  data-aos="fade-right" class="projeto-card">
 
                 <img src="img/projetos/portfolio.PNG" alt="" class="img-card">
 
@@ -328,7 +331,7 @@
 
     </section> <!-- fim projetos -->
 
-    <section id="sobre" class="sobre">
+    <section data-aos="flip-up" id="sobre" class="sobre">
 
         <div class="sobre-content1">
 
@@ -543,59 +546,57 @@
 
             <form action="https://formspree.io/f/mgveqlwj" method="post">
 
-                <div class="form-name">
+                <div class="form-group">
 
                     <!-- Etiqueta -->
-                    <label for="name" class=""> 
+                    <label for="name" class="form-label">
                         Seu Nome *
                         <!-- Campo de Preenchimento -->
-                        <input type="text" name="name" placeholder="nome completo" required>
-                    
+                        <input type="text" name="name" id="name" class="form-input" required>
+
                     </label>
 
                 </div>
 
-                <div class="form-email">
+                <div class="form-group">
 
-                    <label for="email">E-mail *</label>
+                    <label for="email" class="form-label">
 
-                    <input type="email" name="email" id="email" required>
+                        E-mail *
 
-                </div>
+                        <input type="email" name="email" id="email" class="form-input" required>
 
-                <div class="">
-                    <label for="tel"> Contato </label> <br>
-
-                    Whatsapp
-                    <input type="radio" name="tel">
-                    <input type="tel" name="telefone" placeholder="(xx) xxxxx-xxxx" required>
-
-                    <br>
-                    E-mail
-                    <input type="radio" name="tel">
-                    <input type="email" name="telefone">
+                    </label>
 
                 </div>
 
-                <div class="form-grupo">
+                <div class="form-group">
 
-                    <label for=""> Mensagem de Erro </label>
+                    <label for="file" class="form-label">
+                        Anexar Arquivo
 
-                    <input type="file">
+                        <input type="file" name="file" id="file" class="form-input-file">
 
-                </div>
-
-                <div class="">
-
-                    <textarea name="message" id="message" rows="5">
-
-                    </textarea>
+                    </label>
 
                 </div>
 
-                <button type="submit">
+                <div class="form-group">
+
+                    <label for="message" class="form-label">
+
+                        <textarea name="message" id="message" rows="5" class="form-textarea" placeholder="Digite sua mensagem aqui..."> </textarea>
+
+                    </label>
+
+                </div>
+
+
+                <button type="submit" class="form-button">
                     Enviar
                 </button>
+
+
 
             </form>
 
@@ -619,6 +620,9 @@
         </p>
 
     </footer>
+
+    <!--AOS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="js/script.js"> </script>
 
